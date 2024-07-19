@@ -1,10 +1,8 @@
 package com.skasetty.sfg_di.controllers;
 
-import com.skasetty.sfg_di.services.GreetingServiceImp;
+import com.skasetty.sfg_di.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class PropertyInjectedControllerTest {
     PropertyInjectedController controller;
@@ -12,7 +10,7 @@ class PropertyInjectedControllerTest {
     @BeforeEach
     void setUp() {
         controller = new PropertyInjectedController();
-        controller.greetingService = new GreetingServiceImp();
+        controller.greetingService = new ConstructorGreetingService();
     }
 
     @Test
