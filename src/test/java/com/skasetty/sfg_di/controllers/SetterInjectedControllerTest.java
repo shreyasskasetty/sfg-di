@@ -1,17 +1,15 @@
 package com.skasetty.sfg_di.controllers;
 
-import com.skasetty.sfg_di.services.GreetingServiceImp;
+import com.skasetty.sfg_di.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class SetterInjectedControllerTest {
     SetterInjectedController controller;
     @BeforeEach
     void setUp() {
         controller = new SetterInjectedController();
-        controller.setGreetingService(new GreetingServiceImp());
+        controller.setGreetingService(new ConstructorGreetingService());
     }
 
     @Test
